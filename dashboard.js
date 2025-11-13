@@ -96,3 +96,48 @@ memo.value = localStorage.getItem("memo") || "";
 memo.addEventListener("input", () => {
   localStorage.setItem("memo", memo.value);
 });
+// 📅 달력 생성
+function renderCalendar() {
+  const calendar = document.getElementById("calendar");
+  calendar.innerHTML = "";
+
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+
+  const dayNames = ["일", "월", "화", "수", "목", "금", "토"];
+
+  // 요일 표시
+  dayNames.forEach(day => {
+    const div = document.createElement("div");
+    div.textContent = day;
+    div.className = "day-name";
+    calendar.appendChild(div);
+  });
+
+  // 빈 칸 채우기
+  for (let i = 0; i < firstDay.getDay(); i++) {
+    const empty = document.createElement("div");
+    calendar.appendChild(empty);
+  }
+
+  // 날짜 표시
+  for (let i = 1; i <= lastDay.getDate(); i++) {
+    const div = document.createElement("div");
+    div.textContent = i;
+
+    if (
+      i === now.getDate() &&
+      month === now.getMonth() &&
+      year === now.getFullYear()
+    ) {
+      div.classList.add("today");
+    }
+
+    calendar.appendChild(div);
+  }
+}
+renderCalendar();

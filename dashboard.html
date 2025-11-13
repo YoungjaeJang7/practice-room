@@ -22,33 +22,51 @@
 
     <div class="row g-4">
 
-      <div class="col-md-12">
+      <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+          <h3 class="card-title text-center mb-3">📅캘린더</h3>
+          <div id="calendar"
+               class="calendar"></div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
         <div class="card shadow-sm">
           <div class="card-body">
             <h3 class="card-title">📜 할 일 목록</h3>
-            <ul id="todo-list" class="list-group mb-3"></ul>
+            <ul id="todo-list"
+                class="list-group mb-3"></ul>
             <div class="input-group">
-              <input id="todo-input" type="text" class="form-control" placeholder="+재밌으면 써보기+" />
-              <button id="add-todo" class="btn btn-primary">+</button>
+              <input id="todo-input" 
+                     type="text" 
+                     class="form-control" 
+                     placeholder="+재밌으면 써보기+" />
+              <button id="add-todo" 
+                      class="btn btn-primary">+</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-12">
+      <div class="col-md-6">
         <div class="card shadow-sm">
           <div class="card-body">
             <h3 class="card-title">🛣️ 메모</h3>
-            <textarea id="memo" class="form-control" rows="7" placeholder="+심심하면 써보기+"></textarea>
+            <textarea id="memo"
+                      class="form-control"
+                      rows="7" 
+                      placeholder="+심심하면 써보기+"></textarea>
           </div>
         </div>
       </div>
 
-      <div class="col-md-12">
+      <div class="col-md-6">
         <div class="card shadow-sm text-center p-3">
           <h3 class="card-title">⏰Time</h3>
-          <h2 id="clock" class="my-3"></h2>
-          <blockquote id="quote" class="blockquote fst-italic"></blockquote>
+          <h2 id="clock"
+              class="my-3"></h2>
+          <blockquote id="quote"
+                      class="blockquote fst-italic"></blockquote>
         </div>
       </div>
     </div>
