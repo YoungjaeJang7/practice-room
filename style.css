@@ -1,0 +1,31 @@
+body {
+    font-family: "pretendard", "Noto Sans KR", sans-serif;
+    background-color: #6ea4da;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+#clock {
+    font-weight: bold;
+    color: #98209c;
+}
+
+textarea {
+    resize: none;
+}
+
+#todo-list li {
+  transition: all 0.1s ease;
+}
+
+#todo-list li:hover {
+  background-color: #f1f3f5;
+  transform: scale(1.2);
+}
+
+.btn-outline-danger {
+  border-radius: 50%;
+  padding: 20px 20px;
+}
